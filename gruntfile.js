@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   		},
   		dist: {
   			files: {
-  				'style/main.css': 'sass/main.sass'
+  				'style/style.css': 'sass/style.sass'
   			}
   		}
   	},
@@ -29,10 +29,10 @@ module.exports = function(grunt) {
 	}
 	});
 	
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass'], ['jshint'], ['watch']);
+	grunt.registerTask('default', ['sass','jshint','watch']);
 
 };
